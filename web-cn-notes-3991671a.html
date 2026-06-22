@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 资料索引入口</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fafaf9;
+            color: #1c1917;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            padding: 2.5rem 1.25rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 42rem;
+            width: 100%;
+        }
+
+        /* 标题层级 —— 极简、清晰 */
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            color: #292524;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #78716c;
+            border-bottom: 1px solid #e7e5e4;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 510;
+            letter-spacing: -0.01em;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #44403c;
+            border-left: 3px solid #a8a29e;
+            padding-left: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 520;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #57534e;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: #3f3a36;
+        }
+
+        a {
+            color: #1c1917;
+            text-decoration-color: #d6d3d1;
+            text-underline-offset: 4px;
+            transition: text-decoration-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0f0e0c;
+            text-decoration-color: #78716c;
+        }
+
+        /* 卡片组 —— 目录感布局 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin: 1.75rem 0 2.25rem 0;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border: 1px solid #e7e5e4;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card-item:hover {
+            border-color: #c7c2be;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .card-item .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #78716c;
+            background: #f5f4f2;
+            padding: 0.2rem 0.65rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-item .entry-title {
+            font-weight: 510;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: #292524;
+        }
+
+        .card-item .entry-desc {
+            font-size: 0.9rem;
+            color: #6b6560;
+            line-height: 1.6;
+        }
+
+        .info-block {
+            background: #f7f6f4;
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            margin-top: 2.5rem;
+            border-top: 1px solid #e7e5e4;
+            padding-top: 1.75rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.1rem;
+        }
+
+        .faq-q {
+            font-weight: 490;
+            font-size: 0.95rem;
+            color: #292524;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #6b6560;
+            margin-top: 0.1rem;
+            padding-left: 0.2rem;
+        }
+
+        .footnote {
+            margin-top: 3rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid #e7e5e4;
+            font-size: 0.85rem;
+            color: #a8a29e;
+            text-align: left;
+        }
+
+        .footnote a {
+            color: #57534e;
+            text-decoration: underline;
+            text-decoration-color: #d6d3d1;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e7e5e4;
+            margin: 1.25rem 0;
+        }
+
+        /* 响应式窄边调整 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 0.75rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .card-item {
+                padding: 1rem 1.1rem;
+            }
+            .info-block {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>世界杯·信息索引</h1>
+        <div class="subhead">资料整理 · 知识库入口 · 清晰目录</div>
+    </header>
+
+    <!-- 简要说明区：定位 -->
+    <p>
+        本页以资料整理和索引为出发点，汇集关于<a href="https://web-cn-fifa2026.com">世界杯</a>的体系化信息节点。
+        不再依赖零散搜索，而是通过分类卡片和要点提示，快速定位赛事结构、历史沿革与相关资源。
+        所有内容均保持平实、可查证，适合信息浏览与入门指引。
+    </p>
+
+    <!-- 目录感布局：卡片组 三个区块 -->
+    <h2>📁 信息目录</h2>
+    <div class="card-grid">
+        <div class="card-item">
+            <span class="tag">赛事框架</span>
+            <div class="entry-title">2026 年世界杯体系</div>
+            <div class="entry-desc">
+                赛制调整、参赛名额分配、主办城市与场馆概况。涵盖预选赛阶段、小组赛及淘汰赛结构说明。
+            </div>
+        </div>
+        <div class="card-item">
+            <span class="tag">历史资料</span>
+            <div class="entry-title">历届赛事数据库</div>
+            <div class="entry-desc">
+                从 1930 年至今各届冠军、决赛比分、金靴得主与经典比赛记录。提供简明年代索引与统计数据。
+            </div>
+        </div>
+        <div class="card-item">
+            <span class="tag">观赛指引</span>
+            <div class="entry-title">转播与实时信息</div>
+            <div class="entry-desc">
+                官方媒体渠道、赛程日历、比赛时间转换说明。帮助使用者规划观赛节奏，获取可靠信息源。
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示区：卡片式说明 -->
+    <h2>📌 使用提示</h2>
+    <div class="info-block">
+        <p><strong>·</strong> 本索引页侧重结构与目录引导，核心信息持续整合自公开资料。如需访问完整赛事主页，可直接使用 <a href="https://web-cn-fifa2026.com">世界杯</a> 链接。</p>
+        <p><strong>·</strong> 建议结合官方赛历与本站目录交叉参考，避免非官方渠道带来的信息延迟。部分历史数据以国际足联公布版本为准。</p>
+        <p><strong>·</strong> 页面内容不设自动跳转，每个索引条目均为独立知识入口，可按需深入。</p>
+    </div>
+
+    <!-- 相关信息区：其中包括 FAQ 摘要和附加链接 -->
+    <h2>📖 相关信息</h2>
+    <p>
+        以下摘录常见问题与补充说明，帮助快速了解 <a href="https://web-cn-fifa2026.com">世界杯</a> 相关事项的整理框架。
+        内容保持克制，不进行预测或夸大表述。
+    </p>
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">问：2026 年世界杯有哪些明显变化？</div>
+            <div class="faq-a">参赛队伍从 32 支扩军至 48 支，小组赛阶段调整为 12 组每组 4 队，淘汰赛增加一轮。主办城市分布于美国、加拿大、墨西哥三国。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：历史数据索引是否包含早期赛事？</div>
+            <div class="faq-a">是的。从 1930 年乌拉圭世界杯开始，每一届的冠军、决赛对阵、最佳射手等信息均已整理，可通过历年索引查阅。部分早期赛事数据因记录原因存在缺失，已注明。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">问：如何确认赛事时间与转播信息？</div>
+            <div class="faq-a">建议以主办国当地时间和国际足联官方发布为准。本索引页提供赛历概览与常用时区对照，但最终时间以 <a href="https://web-cn-fifa2026.com">世界杯</a> 官方页面更新为准。</div>
+        </div>
+    </div>
+
+    <!-- 一个小的附加信息区，体现资料整理视角 -->
+    <hr>
+    <p style="font-size:0.9rem; color:#6b6560;">
+        <strong>整理说明</strong>：本页作为静态索引入口，持续整合赛事框架、历史记录与实用指引。信息版本更新时，目录结构保持稳定。
+        若有疏漏或更准确的数据源，欢迎通过可靠渠道反馈。
+    </p>
+
+    <!-- footer 简单署名（仅为页面完整性） -->
+    <div class="footnote">
+        <span>世界杯资料索引 · 保持平实与可靠</span>
+        <span style="margin-left: 1rem;">·</span>
+        <span style="margin-left: 1rem;"><a href="https://web-cn-fifa2026.com">世界杯</a></span>
+    </div>
+
+</div>
+</body>
+</html>
